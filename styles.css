@@ -224,6 +224,21 @@ section {
     margin-bottom: 3rem;
 }
 
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px rgba(13, 110, 253, 0.3);
+    object-fit: cover;
+    transition: all 0.3s ease;
+    border: 4px solid #0d6efd;
+}
+
+.profile-img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(13, 110, 253, 0.4);
+}
+
 .placeholder-avatar {
     display: inline-flex;
     align-items: center;
@@ -247,14 +262,57 @@ section {
     }
 }
 
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+/* ========================================
+   EDUCATION SECTION
+   ======================================== */
+
+.education-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    transition: all 0.3s ease;
+    border-left: 5px solid #0d6efd;
 }
 
-.about-image .placeholder-avatar i {
-    animation: none;
+.education-card:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 35px rgba(13, 110, 253, 0.2);
+}
+
+.education-icon {
+    font-size: 3rem;
+    color: #0d6efd;
+    min-width: 80px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover .education-icon {
+    color: #0dcaf0;
+    transform: scale(1.1);
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-content h5 {
+    color: #0d6efd;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.education-content .text-muted {
+    font-size: 0.95rem;
+}
+
+.education-details p {
+    color: #666;
+    line-height: 1.8;
 }
 
 /* ========================================
@@ -636,10 +694,18 @@ footer p {
         font-size: 2rem;
     }
 
-    .placeholder-avatar {
-        width: 200px;
-        height: 200px;
-        font-size: 100px;
+    .profile-img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .education-icon {
+        min-width: auto;
     }
 
     .skills-grid {
@@ -724,10 +790,9 @@ footer p {
         font-size: 0.85rem;
     }
 
-    .placeholder-avatar {
-        width: 150px;
-        height: 150px;
-        font-size: 75px;
+    .profile-img {
+        width: 200px;
+        height: 200px;
     }
 
     section {
@@ -751,5 +816,9 @@ footer p {
 
     h4 {
         font-size: 1.25rem;
+    }
+
+    .education-card {
+        padding: 1.5rem;
     }
 }
